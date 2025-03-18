@@ -35,7 +35,7 @@ const App = () => {
         {tasks.map(task => (
           <Task 
             key={task.id} 
-            task={task} 
+            taskProp={task} 
             deleteTask={deleteTask} 
             toggleTaskCompletion={toggleTaskCompletion} 
           />

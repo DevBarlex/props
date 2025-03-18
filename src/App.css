@@ -48,23 +48,11 @@ li {
   width: 300px;
   padding: 10px;
   border-radius: 5px;
-  text-decoration: line-through;
+  
 }
 
 
-button {
-  background-color: black;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  font-size: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-}
 
-button:hover {
-  background-color: #444;
-}
 
 ul {
   list-style: none;

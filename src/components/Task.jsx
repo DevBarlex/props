@@ -1,15 +1,12 @@
-function Task({ task, deleteTask, toggleTaskCompletion}) {
+function Task({ taskProp, deleteTask, toggleTaskCompletion}) {
     return (
-        <li 
-            className="card"
-            style={{ textDecoration: task.completed ? 'line.through' : 'none', cursor: 'pointer' }}
-            onClick={() => toggleTaskCompletion(task.id)}
-        >
-            {task.text} 
-            <buttom onClick={(e) => { e.stopPropagation(); deleteTask(task.id)}}>
+        <li>
+            <p
+            style={{ textDecoration: taskProp.completed ? 'line-through' : 'none', cursor: 'pointer' }}
+            onClick={() => toggleTaskCompletion(taskProp.id)}>{taskProp.text}</p>
+            <button onClick={(e) => { e.stopPropagation(); deleteTask(taskProp.id)}}>
                 Elminar
-            </buttom>
-
+            </button>
         </li>
     )
 }

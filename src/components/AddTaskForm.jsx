@@ -1,24 +1,25 @@
 import { useState } from "react"
-function AddTask (task) {
+
+function AddTask({ addTask }) {
     const [taskText, setTaskText] = useState('')
 
     const handleSubmit = (e) => {
-        e.preventdefault()
+        e.preventDefault() 
         if (taskText.trim() === '') return
-        task(taskText) 
+        addTask(taskText) 
         setTaskText('')
     }
     
     return (
         <>
-            <form onSSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
                 <input 
                     type="text"
                     value={taskText}
                     onChange={(e) => setTaskText(e.target.value)}
                     placeholder="Añadir nueva tarea"
                 />
-                <buttom type="submit">Agregar</buttom>
+                <button type="submit">Agregar</button> 
             </form>
         </>
     )
